@@ -1,0 +1,3 @@
+com\speedy\reports\api\core\handler\TransactionHandler.class
+com\speedy\reports\api\core\port\inbound\TransactionInbound.class
+com\speedy\reports\api\core\port\outbound\TransactionOutbound.class

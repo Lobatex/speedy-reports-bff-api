@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>speedy.reports</groupId>
+		<artifactId>reports-api</artifactId>
+		<version>0.0.9</version>
+	</parent>
+	<groupId>speedy.reports.outbound</groupId>
+	<artifactId>reports-outbound</artifactId>
+	<version>0.0.9</version>
+	<packaging>pom</packaging>
+	<name>reports-outbound</name>
+	<description>Module for manage external resources like integrations and datasource</description>
+	<modules>
+		<module>reports-outbound-rest</module>
+		<module>reports-outbound-database</module>
+	</modules>
+
+</project>

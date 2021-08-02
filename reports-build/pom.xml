@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>speedy.reports</groupId>
+		<artifactId>reports-api</artifactId>
+		<version>0.0.9</version>
+	</parent>
+	<groupId>speedy.reports.build</groupId>
+	<artifactId>reports-build</artifactId>
+	<name>reports-build</name>
+	<description>Module for manage boot of aplication and resources </description>
+	<dependencies>
+		<!-- Spring Dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Inject Dependencies Container -->
+		<dependency>
+			<groupId>speedy.reports.inbound</groupId>
+			<artifactId>reports-inbound-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>speedy.reports.outbound</groupId>
+			<artifactId>reports-outbound-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>speedy.reports.core</groupId>
+			<artifactId>reports-core</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>reports-application</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.speedy.reports.api.Application</mainClass>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+</project>

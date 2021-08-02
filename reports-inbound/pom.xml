@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>speedy.reports</groupId>
+		<artifactId>reports-api</artifactId>
+		<version>0.0.9</version>
+	</parent>
+	<groupId>speedy.reports.inbound</groupId>
+	<artifactId>reports-inbound</artifactId>
+	<packaging>pom</packaging>
+	<name>reports-inbound</name>
+	<description>Module for inbounds adapters like rest, soap and stdin</description>
+	<modules>
+		<module>reports-inbound-rest</module>
+	</modules>
+</project>

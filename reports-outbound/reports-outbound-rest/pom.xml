@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>speedy.reports</groupId>
+		<artifactId>reports-api</artifactId>
+		<version>0.0.9</version>
+		<relativePath>../../</relativePath>
+	</parent>
+	<packaging>jar</packaging>
+
+	<groupId>speedy.reports.outbound</groupId>
+	<artifactId>reports-outbound-rest</artifactId>
+	<version>0.0.9</version>
+	<name>reports-outbound-rest</name>
+
+	<description>Module for rest integrations</description>
+	<dependencies>
+		<!-- Spring Dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Lombok Dependencies -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- HTTP Dependencies -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<!-- Project Dependencies -->
+		<dependency>
+			<groupId>speedy.reports.core</groupId>
+			<artifactId>reports-core</artifactId>
+		</dependency>
+		<!-- Jackson Dependencies -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+</project>
