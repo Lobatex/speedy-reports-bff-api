@@ -30,7 +30,7 @@ public class TransactionsAdapter implements TransactionOutbound {
 		payload.setFromDate("2021-10-01");
 		payload.setMerchant(1);
 		payload.setAcquirer(1);
-		ResponseEntity<TransactionsReportResponse> responseIntegration = transactionRest.getTransactionReportsIntegration(payload);
+		//ResponseEntity<TransactionsReportResponse> responseIntegration = transactionRest.getTransactionReportsIntegration(payload);
 		//TODO: add DTO for core module and serialize it for return
 	}
 

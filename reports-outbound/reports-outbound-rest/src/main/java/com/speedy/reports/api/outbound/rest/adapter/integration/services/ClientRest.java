@@ -22,7 +22,7 @@ public class ClientRest extends IntegrationRest {
 	public ResponseEntity<Customer> getClientIntegration(ClientPayload clientPayload) {
 		// TODO: create singleton for token and verify if token need be refreshed
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Bearer " + getToken());
+		headers.add("Authorization", getToken());
 		HttpEntity<ClientPayload> payload = new HttpEntity<>(clientPayload, headers);
 		ResponseEntity<Customer> response = getIntegration().postForEntity(getGetClient(), payload, Customer.class);
 		return response;

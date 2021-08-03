@@ -11,24 +11,23 @@ import com.speedy.reports.api.outbound.rest.adapter.integration.commons.payload.
 import com.speedy.reports.api.outbound.rest.adapter.integration.commons.payload.TransactionsReportPayload;
 import com.speedy.reports.api.outbound.rest.adapter.integration.commons.response.TransactionListResponse;
 import com.speedy.reports.api.outbound.rest.adapter.integration.commons.response.TransactionResponse;
-import com.speedy.reports.api.outbound.rest.adapter.integration.commons.response.TransactionsReportResponse;
 
 @Service
 public class TransactionRest extends IntegrationRest {
 
 
-	public ResponseEntity<TransactionsReportResponse> getTransactionReportsIntegration(TransactionsReportPayload transactionPayload) {
+	public ResponseEntity<String> getTransactionReportsIntegration(TransactionsReportPayload transactionPayload) {
 		//TODO: create singleton for token and verify if token need be refreshed
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Bearer "+ getToken());
+		headers.add("Authorization", getToken());
 		HttpEntity<TransactionsReportPayload> payload = new HttpEntity<>(transactionPayload, headers);
-		ResponseEntity<TransactionsReportResponse> response = getIntegration().postForEntity(getGetTransactionsReport(), payload, TransactionsReportResponse.class);
+		ResponseEntity<String> response = getIntegration().postForEntity(getGetTransactionsReport(), payload, String.class);
 		return response;
 	}
 	
 	public ResponseEntity<TransactionResponse> getTransactionIntegration(TransactionPayload transactionPayload) {
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Bearer "+ getToken());
+		headers.add("Authorization", getToken());
 		HttpEntity<TransactionPayload> payload = new HttpEntity<>(transactionPayload, headers);
 		ResponseEntity<TransactionResponse> response = getIntegration().postForEntity(getGetTransactionsList(), payload, TransactionResponse.class);
 		return response;
@@ -36,7 +35,7 @@ public class TransactionRest extends IntegrationRest {
 	
 	public ResponseEntity<TransactionListResponse> getTransactionListIntegration(TransactionListPayload transactionPayload) {
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Bearer "+ getToken());
+		headers.add("Authorization",getToken());
 		HttpEntity<TransactionListPayload> payload = new HttpEntity<>(transactionPayload, headers);
 		ResponseEntity<TransactionListResponse> response = getIntegration().postForEntity(getGetTransactionsList(), payload, TransactionListResponse.class);
 		return response;

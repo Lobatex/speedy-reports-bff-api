@@ -1,0 +1,3 @@
+com\speedy\reports\api\outbound\rest\adapter\integration\services\ClientRestTest.class
+com\speedy\reports\api\outbound\rest\adapter\integration\services\TransactionRestTest.class
+com\speedy\reports\api\outbound\rest\adapter\integration\services\LoginRestTest.class
